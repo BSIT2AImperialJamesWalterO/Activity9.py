@@ -1,11 +1,13 @@
 # Activity9.py
-password = input("Enter your password --> ")
-if password.lower() == "secret":
-  print("Access Granted")
-  print("Thank you for using the system")
-elif password == "123":
-  print("Access Granted")
-  print("Thank you for using the system")
-else:
-  print("Access Denied")
-print("Thank you for using the system")
+name = input("Please enter your name --> ")
+age = input("Please enter your age --> ")
+try:
+  age = int(age)
+  if age < 18:
+    print(f"Hello, {name}, You are a minor")
+  elif age >= 18 and age < 65:
+    print(f"Hello, {name}, You are an adult")
+  else:
+    print(f"Hello, {name}, You are a senior citizen.")
+except ValueError:
+  print("Invalid age input. Please enter a number.")
